@@ -38,16 +38,14 @@ a {
   color: inherit;
 }
 
-/* 7. Improve focus visibility */
-:focus {
-  outline: 2px solid blue;
-  outline-offset: 2px;
-}
-
 /* 8. Ensure elements take up full height */
 html,
 body {
   height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .navbar {
