@@ -1,0 +1,61 @@
+/* 1. Remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Improve typography consistency */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Remove default button styles */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* 5. Ensure images and media are responsive */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 6. Remove text decoration from links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 7. Improve focus visibility */
+:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+/* 8. Ensure elements take up full height */
+html,
+body {
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
