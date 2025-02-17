@@ -6,6 +6,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -19,8 +24,8 @@ section {
 }
 
 .navbar {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 1rem;
   position: sticky;
   top: 0;
@@ -68,7 +73,6 @@ section {
 
     font-size: 20rem;
     font-weight: 900;
-    color: #000000;
     opacity: 0.2;
   }
 }
