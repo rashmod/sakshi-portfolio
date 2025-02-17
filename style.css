@@ -65,16 +65,16 @@ section {
     font-weight: 600;
     line-height: 1;
   }
+}
 
-  h2 {
-    position: absolute;
-    bottom: -100;
-    z-index: -1;
+.title-name {
+  position: absolute;
+  bottom: -100;
+  z-index: -1;
 
-    font-size: 20rem;
-    font-weight: 900;
-    opacity: 0.2;
-  }
+  font-size: 20rem;
+  font-weight: 900;
+  opacity: 0.2;
 }
 
 .projects-section {
@@ -148,5 +148,72 @@ section {
         transform-origin: left;
       }
     }
+  }
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+}
+
+.cover {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  animation: fadeOut 1s ease-in-out 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+.cover div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  animation: moveDown 1s ease-in-out 1 2s forwards;
+}
+
+.cover .title-name {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  transform-origin: -50% -50%;
+  font-size: 20rem;
+  opacity: 1;
+
+  animation: rotate 2s ease-in-out 1 forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(100%) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0%) rotate(0deg) skewY(0deg);
+  }
+}
+
+@keyframes moveDown {
+  100% {
+    top: 103%;
+    transform: translateY(-100%);
   }
 }
