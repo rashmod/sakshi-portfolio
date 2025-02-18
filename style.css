@@ -313,3 +313,12 @@ body {
 .timeline-item.visible .dot {
   opacity: 1;
 }
+
+footer {
+  .title-name {
+    position: static;
+    text-align: center;
+    line-height: 1;
+    opacity: 1;
+  }
+}
