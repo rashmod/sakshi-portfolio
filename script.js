@@ -9,6 +9,7 @@ setTimeout(() => {
 }, 3500);
 
 const circle = document.querySelector("#circle");
+const circleSize = document.querySelector("#circle").clientWidth;
 let mouseX = 0;
 let mouseY = 0;
 let circleX = 0;
@@ -20,11 +21,13 @@ let lagFactor = 0.2;
 let scale = 1;
 
 document.addEventListener("mousemove", (event) => {
-  const now = Date.now();
-  const timeDelta = now - lastTime;
-
   mouseX = event.clientX;
   mouseY = event.clientY;
+});
+
+function animate() {
+  const now = Date.now();
+  const timeDelta = now - lastTime;
 
   const dx = mouseX - lastX;
   const dy = mouseY - lastY;
@@ -34,22 +37,19 @@ document.addEventListener("mousemove", (event) => {
     const speed = distance / timeDelta;
 
     lagFactor = Math.min(0.2, 0.1 + speed * 0.005);
-
     scale = Math.max(0.4, 1 - distance * 0.03);
-
-    circle.style.transform = `translate(${circleX}px, ${circleY}px) scale(${scale})`;
   }
 
   lastX = mouseX;
   lastY = mouseY;
   lastTime = now;
-});
 
-function animate() {
   circleX += (mouseX - circleX) * lagFactor;
   circleY += (mouseY - circleY) * lagFactor;
 
-  circle.style.transform = `translate(${circleX}px, ${circleY}px) scale(${scale})`;
+  const offset = (circleSize * scale) / 2;
+
+  circle.style.transform = `translate(${circleX - offset}px, ${circleY - offset}px) scale(${scale})`;
 
   requestAnimationFrame(animate);
 }
