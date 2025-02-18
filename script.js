@@ -2,11 +2,13 @@ const cover = document.querySelector(".cover");
 const coverHeading = document.querySelector(".cover h2");
 const name = document.getElementById("name");
 
-setTimeout(() => {
-  console.log("hello");
-  document.body.style.overflow = "auto";
-  cover.style.display = "none";
-}, 3500);
+// setTimeout(() => {
+//   console.log("hello");
+//   document.body.style.overflow = "auto";
+//   cover.style.display = "none";
+// }, 3500);
+
+document.body.style.overflow = "auto";
 
 const circle = document.querySelector("#circle");
 const circleSize = document.querySelector("#circle").clientWidth;
