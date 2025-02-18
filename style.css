@@ -221,10 +221,11 @@ body {
 #circle {
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: skyblue;
   border-radius: 50%;
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none; /* Prevents interfering with clicks */
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
 }
