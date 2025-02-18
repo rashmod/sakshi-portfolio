@@ -217,3 +217,14 @@ body {
     transform: translateY(-100%);
   }
 }
+
+#circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Prevents interfering with clicks */
+}
