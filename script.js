@@ -55,3 +55,19 @@ function animate() {
 }
 
 animate();
+
+function revealTimeline() {
+  const items = document.querySelectorAll(".timeline-item");
+
+  items.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.8) {
+      item.classList.add("visible");
+    } else {
+      item.classList.remove("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealTimeline);
+revealTimeline();
