@@ -21,8 +21,8 @@ let lagFactor = 0.2;
 let scale = 1;
 
 document.addEventListener("mousemove", (event) => {
-  mouseX = event.clientX;
-  mouseY = event.clientY;
+  mouseX = event.pageX;
+  mouseY = event.pageY;
 });
 
 function animate() {
